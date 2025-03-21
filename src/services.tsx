@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-const services = {
+const services: Record<string, { title: string; desc: string }[]> = {
   "AI Services": [
     { 
         title: "AI Strategy Consulting & AI Center of Excellence (AI COE)", 
@@ -92,7 +92,7 @@ const services = {
 export default function ServicesPage({ }) {
   const { serviceType = "AI Services" } = useParams();
 
-  const selectedServices = services[serviceType] || [];
+  const selectedServices = services[serviceType as keyof typeof services] || [];
 
   interface Service {
     title: string;
