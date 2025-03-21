@@ -89,7 +89,11 @@ const services: Record<string, { title: string; desc: string }[]> = {
   ]
 };
 
-export default function ServicesPage({ activeService : String }) {
+interface ServicesPageProps {
+  activeService: string;
+}
+
+export default function ServicesPage({ activeService }: ServicesPageProps) {
   console.log(activeService)
   const { serviceType = "AI Services" } = useParams();
 
