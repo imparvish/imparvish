@@ -31,10 +31,6 @@ export default function Home() {
     };
   }, []);
 
-  interface ServicesPageProps {
-    activeService: string;
-  }
-
   return (
     <Router>
       <div className="min-h-screen bg-[#0a192f] text-white transition-all duration-500 ">
