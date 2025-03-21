@@ -18,36 +18,10 @@ export default function Home() {
   const tabs = ["Home","About Us", "Services", "Experience", "Careers", "Contact"];
   const serviceOptions = ["AI Services", "Data Services", "Cloud Services"];
   console.log(setActiveTab, setActiveService)
-  /**const services = {
-    "AI Services": [
-      { title: "AI & ML Platform", desc: "Comprehensive AI/ML solutions enabling businesses to innovate and scale." },
-      { title: "AI Center of Excellence (AI COE)", desc: "A dedicated hub to drive AI research, strategy, and implementation." },
-      { title: "Custom AI/ML Solutions", desc: "Tailored AI models built to solve unique business challenges." },
-      { title: "Generative AI (GenAI) Services", desc: "AI-powered content generation and automation solutions." },
-      { title: "AI Integration & Deployment (MLOps)", desc: "Seamless AI model deployment and lifecycle management." },
-      { title: "AI Strategy Consulting", desc: "Expert guidance to help businesses create and execute AI strategies." },
-      { title: "Computer Vision Solutions", desc: "AI-driven image and video analysis for automation and insights." },
-      { title: "Natural Language Processing", desc: "Advanced NLP solutions for text analysis, chatbots, and automation." },
-      { title: "Ethical AI Practices & Implementation", desc: "Ensuring fairness, transparency, and responsibility in AI systems." },
-      { title: "Synthetic Data Generation", desc: "Generating artificial datasets to train AI models while preserving privacy." }
-    ],
-    "Data Services": [
-      { title: "Data Strategy and Consulting", desc: "Helping organizations define and execute data-driven strategies." },
-      { title: "Data Integration & ETL Pipelines", desc: "Seamless data extraction, transformation, and loading processes." },
-      { title: "Data Warehousing & Data Virtualization", desc: "Scalable solutions for storing and accessing structured data efficiently." },
-      { title: "Data Governance", desc: "Ensuring data quality, security, and compliance across systems." },
-      { title: "Data Catalog & Discovery", desc: "Organizing and indexing data assets for easy search and retrieval." }
-    ],
-    "Cloud Services": [
-      { title: "Cloud Architecture", desc: "Design and implementation of scalable cloud infrastructures." },
-      { title: "Serverless Computing", desc: "Optimizing cloud-based applications for efficiency and cost savings." },
-      { title: "Cloud Security", desc: "Ensuring data protection and compliance in cloud environments." }
-    ]
-  };**/
 
   useEffect(() => {
     function handleClickOutside(event: Event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setShowDropdown(false);
       }
     }
@@ -56,6 +30,10 @@ export default function Home() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  interface ServicesPageProps {
+    activeService: string;
+  }
 
   return (
     <Router>
