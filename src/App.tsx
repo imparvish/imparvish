@@ -8,15 +8,12 @@ import ExperiencePage from "./experience";
 import ContactPage from "./contact";
 import CareersPage from "./careers";
 import logo from "./img/logo1.png";
-import { useRef } from "react";
-
-const dropdownRef = useRef<HTMLDivElement>(null);
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Home");
   const [activeService, setActiveService] = useState("AI Services");
   const [showDropdown, setShowDropdown] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const tabs = ["Home","About Us", "Services", "Experience", "Careers", "Contact"];
   const serviceOptions = ["AI Services", "Data Services", "Cloud Services"];
