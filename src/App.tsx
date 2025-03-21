@@ -8,6 +8,7 @@ import ExperiencePage from "./experience";
 import ContactPage from "./contact";
 import CareersPage from "./careers";
 import logo from "./img/logo1.png";
+import { useParams } from "react-router-dom";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -32,7 +33,6 @@ export default function Home() {
   }, []);
 
   function ServicesWrapper() {
-    import { useParams } from "react-router-dom";
     const { serviceType } = useParams();
     return <ServicesPage activeService={serviceType || "AI Services"} />;
   }
