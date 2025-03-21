@@ -6,5 +6,8 @@
   ],
   "compilerOptions": {
     "noImplicitAny": false
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx"
   }
 }
