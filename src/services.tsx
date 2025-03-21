@@ -89,9 +89,8 @@ const services = {
   ]
 };
 
-export default function ServicesPage({ activeService }) {
-  console.log(activeService)
-  const { serviceType } = useParams(); // Read the service type from the URL
+export default function ServicesPage({ }) {
+  const { serviceType = "AI Services" } = useParams();
 
   const selectedServices = services[serviceType] || [];
 

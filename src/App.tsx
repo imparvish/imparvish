@@ -8,6 +8,9 @@ import ExperiencePage from "./experience";
 import ContactPage from "./contact";
 import CareersPage from "./careers";
 import logo from "./img/logo1.png";
+import { useRef } from "react";
+
+const dropdownRef = useRef<HTMLDivElement>(null);
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -46,7 +49,7 @@ export default function Home() {
   };**/
 
   useEffect(() => {
-    function handleClickOutside(event) {
+    function handleClickOutside(event: Event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setShowDropdown(false);
       }
