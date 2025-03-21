@@ -95,8 +95,8 @@ export default function ServicesPage({ }) {
   const selectedServices = services[serviceType] || [];
 
   interface Service {
-    name: string;
-    description: string;
+    title: string;
+    desc: string;
   }
 
   return (
