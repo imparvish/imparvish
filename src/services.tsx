@@ -94,13 +94,18 @@ export default function ServicesPage({ }) {
 
   const selectedServices = services[serviceType] || [];
 
+  interface Service {
+    name: string;
+    description: string;
+  }
+
   return (
     <div className="p-10 text-center">
       <h2 className="text-4xl font-bold text-[#09354a] mb-6">
         {serviceType ? serviceType.replace("-", " ") : "Services"}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {selectedServices.map((service, index) => (
+        {selectedServices.map((service: Service, index: number) => (
           <div key={index} className="bg-white text-[#0a192f] p-6 rounded-xl shadow-lg">
             <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
             <p className="text-gray-700">{service.desc}</p>
