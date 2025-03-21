@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import imgAI from "./img/aiservices.jpg";
 import imgDataAnalytics from "./img/image-1000x600.jpg";

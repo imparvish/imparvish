@@ -90,6 +90,7 @@ const services = {
 };
 
 export default function ServicesPage({ activeService }) {
+  console.log(activeService)
   const { serviceType } = useParams(); // Read the service type from the URL
 
   const selectedServices = services[serviceType] || [];

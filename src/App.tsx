@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./home";
 import AboutPage from "./about";
@@ -18,8 +17,8 @@ export default function Home() {
 
   const tabs = ["Home","About Us", "Services", "Experience", "Careers", "Contact"];
   const serviceOptions = ["AI Services", "Data Services", "Cloud Services"];
-
-  const services = {
+  console.log(setActiveTab, setActiveService)
+  /**const services = {
     "AI Services": [
       { title: "AI & ML Platform", desc: "Comprehensive AI/ML solutions enabling businesses to innovate and scale." },
       { title: "AI Center of Excellence (AI COE)", desc: "A dedicated hub to drive AI research, strategy, and implementation." },
@@ -44,7 +43,7 @@ export default function Home() {
       { title: "Serverless Computing", desc: "Optimizing cloud-based applications for efficiency and cost savings." },
       { title: "Cloud Security", desc: "Ensuring data protection and compliance in cloud environments." }
     ]
-  };
+  };**/
 
   useEffect(() => {
     function handleClickOutside(event) {

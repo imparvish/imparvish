@@ -25,18 +25,6 @@ const jobListings = [
   },
 ];
 
-
-const JobCard = ({ title, description }) => (
-  <div className="p-6 bg-white shadow-lg rounded-lg">
-    <h3 className="text-2xl font-semibold">{title}</h3>
-    <p className="mt-2 text-gray-700">{description}</p>
-    <button className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium" 
-    onClick={openModal}>
-      Apply Now
-    </button>
-  </div>
-);
-
 export default function CareersPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
