@@ -31,6 +31,11 @@ export default function Home() {
     };
   }, []);
 
+  function ServicesWrapper() {
+    const { serviceType } = useParams();
+    return <ServicesPage activeService={serviceType || "AI Services"} />;
+  }
+
   return (
     <Router>
       <div className="min-h-screen bg-[#0a192f] text-white transition-all duration-500 ">
@@ -79,7 +84,7 @@ export default function Home() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about-us" element={<AboutPage />} />
-              <Route path="/services/:serviceType" element={<ServicesPage />} />
+              <Route path="/services/:serviceType" element={<ServicesWrapper />} />
               <Route path="/experience" element={<ExperiencePage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/contact" element={<ContactPage />} />
