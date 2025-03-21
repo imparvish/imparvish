@@ -32,6 +32,7 @@ export default function Home() {
   }, []);
 
   function ServicesWrapper() {
+    import { useParams } from "react-router-dom";
     const { serviceType } = useParams();
     return <ServicesPage activeService={serviceType || "AI Services"} />;
   }
