@@ -68,8 +68,8 @@ export default function CareersPage() {
             <h2 className="text-2xl font-bold text-[#09354a]">Apply for the Job</h2>
             <p className="mt-4 text-gray-700">
               Please send your resume to{" "}
-              <a href="mailto:anekanttechnologies@gmail.com" className="text-blue-600 font-medium">
-                anekanttechnologies@gmail.com
+              <a href="mailto:imparvish@gmail.com" className="text-blue-600 font-medium">
+                imparvish@gmail.com
               </a>
             </p>
             <button

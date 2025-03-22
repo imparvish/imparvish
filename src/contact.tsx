@@ -11,7 +11,7 @@ export default function ContactPage() {
       <div className="bg-white shadow-lg rounded-lg p-50 w-full max-w-lg">
         <div className="flex items-center space-x-4 mb-6">
           <Mail className="text-[#09354a]" size={24} />
-          <p className="text-lg font-medium">anekanttechnologies@gmail.com</p>
+          <p className="text-lg font-medium">imparvish@gmail.com</p>
         </div>
         <div className="flex items-center space-x-4 mb-6">
           <Phone className="text-[#09354a]" size={24} />
