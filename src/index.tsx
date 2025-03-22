@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App.tsx"; // Explicitly specify the `.tsx` extension
+import ReactDOM from "react-dom/client"; // Use createRoot from React 18
+import App from "./App"; // Ensure correct import
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
